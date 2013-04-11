@@ -9,6 +9,9 @@ using System.Html.Media.Filters;
 
 namespace System.Html {
 
+    /// <summary>
+    /// </summary>
+    /// <reference>http://dev.w3.org/html5/pf-summary/dom.html#htmlelement</reference>
     [IgnoreNamespace]
 	[ScriptName("Element")]
     [Imported(ObeysTypeSystem = true)]
@@ -27,9 +30,25 @@ namespace System.Html {
         }
 
         [IntrinsicProperty]
+        public string AccessKeyLabel {
+            get {
+                return null;
+            }
+        }
+
+        [IntrinsicProperty]
         public ElementAttributeCollection Attributes {
             get {
                 return null;
+            }
+        }
+
+        [IntrinsicProperty]
+        public bool Checked {
+            get {
+                return false;
+            }
+            set {
             }
         }
 
@@ -92,7 +111,41 @@ namespace System.Html {
         }
 
         [IntrinsicProperty]
+        public string CommandType {
+            get {
+                return null;
+            }
+            set {
+            }
+        }
+
+        [IntrinsicProperty]
+        public string ContentEditable {
+            get {
+                return null;
+            }
+            set {
+            }
+        }
+
+        // TODO: type should be HTMLMenuElement
+        public Element ContextMenu {
+            get {
+                return null;
+            }
+            set {
+            }
+        }
+
+        [IntrinsicProperty]
         public Style CurrentStyle {
+            get {
+                return null;
+            }
+        }
+
+        [IntrinsicProperty]
+        public object Dataset {
             get {
                 return null;
             }
@@ -107,9 +160,17 @@ namespace System.Html {
             }
         }
 
-        // TODO: Is this on Element or just some types of elements?
         [IntrinsicProperty]
         public bool Disabled {
+            get {
+                return false;
+            }
+            set {
+            }
+        }
+
+        [IntrinsicProperty]
+        public bool Draggable {
             get {
                 return false;
             }
@@ -128,6 +189,24 @@ namespace System.Html {
         public Element FirstChild {
             get {
                 return null;
+            }
+        }
+
+        [IntrinsicProperty]
+        public bool Hidden {
+            get {
+                return false;
+            }
+            set {
+            }
+        }
+
+        [IntrinsicProperty]
+        public string Icon {
+            get {
+                return null;
+            }
+            set {
             }
         }
 
@@ -151,6 +230,31 @@ namespace System.Html {
 
         [IntrinsicProperty]
         public string InnerText {
+            get {
+                return null;
+            }
+            set {
+            }
+        }
+
+        [IntrinsicProperty]
+        public bool IsContentEditable {
+            get {
+                return false;
+            }
+        }
+
+        [IntrinsicProperty]
+        public string Label {
+            get {
+                return null;
+            }
+            set {
+            }
+        }
+
+        [IntrinsicProperty]
+        public string Lang {
             get {
                 return null;
             }
@@ -229,6 +333,13 @@ namespace System.Html {
         }
 
         [IntrinsicProperty]
+        public string OuterHTML {
+            get {
+                return null;
+            }
+        }
+
+        [IntrinsicProperty]
         public DocumentInstance OwnerDocument {
             get {
                 return null;
@@ -285,6 +396,16 @@ namespace System.Html {
         public int ScrollWidth {
             get {
                 return 0;
+            }
+        }
+
+        [IntrinsicProperty]
+        [ScriptName("spellcheck")]
+        public string SpellCheck {
+            get {
+                return null;
+            }
+            set {
             }
         }
 
@@ -433,6 +554,9 @@ namespace System.Html {
 
         public bool HasChildNodes() {
             return false;
+        }
+
+        public void InsertAdjacentHTML(string position, string text) {
         }
 
         public Element InsertBefore(Element newChild) {

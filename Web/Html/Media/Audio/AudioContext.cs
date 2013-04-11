@@ -27,10 +27,10 @@ namespace System.Html.Media.Audio
         /// <summary>
         /// Create a new AudioContext.
         /// </summary>
-        [InlineCode("new (window.AudioContext | " +
-                         "window.webkitAudioContext | " +
-                         "window.mozAudioContext | " +
-                         "window.msAudioContext | " +
+        [InlineCode("new (window.AudioContext || " +
+                         "window.webkitAudioContext || " +
+                         "window.mozAudioContext || " +
+                         "window.msAudioContext || " +
                          "window.oAudioContext)()")]
         public AudioContext()
         {
@@ -150,7 +150,7 @@ namespace System.Html.Media.Audio
         /// <param name="mediaElement">mediaElement is an HTMLMediaElement (e.g. audio or video) whose
         /// audio playback should be rerouted into the AudioContext</param>
         /// <returns>The newly created MediaElementAudioSourceNode object.</returns>
-        public MediaElementAudioSourceNode CreateMediaElementSource(System.Html.Element mediaElement)
+        public MediaElementAudioSourceNode CreateMediaElementSource(System.Html.MediaElement mediaElement)
         {
             return null;
         }

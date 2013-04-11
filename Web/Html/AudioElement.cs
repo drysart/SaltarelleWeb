@@ -6,71 +6,19 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace System.Html {
-
+namespace System.Html 
+{
+    /// <summary>
+    /// </summary>
+    /// <reference>http://dev.w3.org/html5/pf-summary/Overview.html#audio</reference>
     [IgnoreNamespace]
-	[ScriptName("Element")]
+	[ScriptName("HTMLAudioElement")]
     [Imported(ObeysTypeSystem = true)]
-    public sealed class AudioElement : Element {
-
-        private AudioElement() {
-        }
-
-        [IntrinsicProperty]
-        public double CurrentTime {
-            get {
-                return 0;
-            }
-            set {
-            }
-        }
-
-        [IntrinsicProperty]
-        public double Duration {
-            get {
-                return 0;
-            }
-        }
-
-        [IntrinsicProperty]
-        public bool Ended {
-            get {
-                return false;
-            }
-        }
-
-        [IntrinsicProperty]
-        public bool Paused {
-            get {
-                return false;
-            }
-        }
-
-        [IntrinsicProperty]
-        public string Src {
-            get {
-                return "";
-            }
-            set {
-            }
-        }
-
-        [IntrinsicProperty]
-        public float Volume {
-            get {
-                return 0;
-            }
-            set {
-            }
-        }
-
-        public void Load() {
-        }
-
-        public void Pause() {
-        }
-
-        public void Play() {
+    public sealed class AudioElement : MediaElement 
+    {
+        [InlineCode("window.document.createElement('audio')")]
+        public AudioElement() 
+        {
         }
     }
 }
